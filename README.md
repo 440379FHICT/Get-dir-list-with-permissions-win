@@ -1,0 +1,1 @@
+# Get-dir-list-with-permissions-win
