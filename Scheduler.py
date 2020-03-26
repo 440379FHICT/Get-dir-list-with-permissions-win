@@ -1,10 +1,14 @@
 import subprocess
 import schedule
 import time
+import os
 
 def getPermissions():
+    ##Get current folder
+    path = os.getcwd()
+    
     subprocess.Popen(['powershell',
-                      '& "C:\\Users\\WimfredPC\\Documents\\Fontys\\Infra\\Semester 2\\Programming\\Folder.ps1"'], shell=False)
+                      path + '\Folder.ps1'], shell=False)
 
 schedule.every(1).minutes.do(getPermissions)
 
